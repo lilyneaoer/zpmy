@@ -1,0 +1,179 @@
+//基于PowerSwitch插件的轮播
+//重写样式，方便复用2016-09-01
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video, input, button {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header,menu, nav, section {
+    display: block;
+}
+body {
+
+}
+ol, ul{
+    list-style: none;
+}
+blockquote, q {
+    quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+    content: '';
+    content: none;
+}
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+input,button,select,textarea{outline:none}
+textarea{resize:none}
+.clear{
+  clear: both;
+}
+img{
+  vertical-align: bottom;
+}
+img:hover{
+  //opacity: 0.7;
+}
+a{
+  color: #3A3839;
+  text-decoration: none;
+}
+a:hover{
+  color:@nxred;
+  text-decoration: none;
+}
+.red{
+	border:1px solid red;
+}
+@nxred:#F65E5F;
+@pageWidth:1210px;
+.TR(@time) {
+  transition: all @time ease;
+  -moz-transition: all @time ease;
+  /* Firefox 4 */
+  -webkit-transition: all @time ease;
+  /* Safari and Chrome */
+  -o-transition: all @time ease;
+  /* Opera */
+}
+/*全新的轮播样式a2*/
+.rollBox{
+  width:100%;//定义外包容器宽高
+  height:380px;
+  overflow: hidden;
+  margin:0 auto;
+  position: relative;
+  overflow: hidden;
+  //z-index: 9999;
+  //控制点前后播放暂停
+  .tabAutoPlay{
+    //width:1903px;
+    height:100%;
+    position:absolute;
+    a{
+      top:50%;
+      position: absolute;
+      width:40px;
+      height:100px;
+      opacity: 0;
+      display: block;
+      z-index: 9999;
+      -webkit-transition: all .3s ease-out;
+      transition: all .3s ease-out;
+      background: url("../img/swfCon.png") no-repeat;
+    }
+    a.pause,a.play{
+      opacity: 1;
+      left:500px;
+      display: none; //隐藏暂停控制点
+    }
+    a.prev{
+      left:15px;
+    }
+    a.next{
+      left:745px;
+      background-position: -50px 0;
+    }
+  }
+  //点点点的样式
+  .tabBtn{
+    left:50%;
+    bottom:20px;
+    position: absolute;
+    z-index: 99;
+    li{
+      float:left;
+      margin:0 0 0 15px;
+      text-align: center;
+      text-indent: -9999px;
+      a.tab_a{
+        width:8px;
+        height:8px;
+        display: block;
+        opacity: 0.5;
+        border:2px solid #FD6A88;
+        border-radius: 50%;
+        background: #FFF;
+      }
+      a.tab_on{
+        //底部激活的缩略图样式
+        border:2px solid #FD6A88;
+        opacity: 1;
+        border-radius: 50%;
+        background:#FD6A88;
+        .TR(.3s);
+      }
+    }
+  }
+  //切换内容的样式 ul
+  .tab_content{
+    //width:1760px;
+    li{
+      width:100%;
+      height:100%;
+      top:0;
+      position: absolute;
+      .rollPic{
+        img{
+          width:100%;
+          height:100%;
+        }
+      }
+      //图片文字说明
+      .rollName{
+        width:100%;
+        text-align: center;
+        position: absolute;
+        bottom:0;
+        font-size: 14px;
+        padding:5px 0;
+        background:rgba(0,0,0,0.6);
+        display:none;
+        a{
+          color:#FFF;
+        }
+        a:hover{
+          color: @nxred;
+        }
+      }
+    }
+  }
+}

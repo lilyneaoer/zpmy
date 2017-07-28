@@ -1,0 +1,34 @@
+<!DOCTYPE HTML>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <title>商品列表</title>
+    <% include pageHead.html %>
+    <link rel="stylesheet" type="text/css" href="../css/style-list.css" />
+</head>
+<body>
+<% include pageTop.html %>
+<!--商品列表s-->
+<div class="mid1200">
+    <ul class="listGoods">
+        <%for(var i=1;i<12;i++){%>
+        <li>
+            <a href="#" title="品牌推荐" target="_blank"><%-img (386,285)%></a>
+            <p class="price">
+                <span>￥</span>288<span>.00</span>
+            </p>
+            <p class="name"><a href="#" target="_blank" title="产后肩颈护理">产后肩颈护理</a><br><span>原价￥666.00元</span> </p>
+            <a class="buyBtn" target="_blank" href="#" title="预约试听">
+                预约体验
+            </a><div class="clear"></div>
+        </li>
+        <%}%><div class="clear"></div>
+    </ul>
+</div>
+<!--商品列表e-->
+<% include pageBar.html %>
+<% include pageBottom.html %>
+<!--顶部导航弹出菜单-->
+<script src="../js/siteMenu.js"></script>
+</body>
+</html>

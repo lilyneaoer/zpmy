@@ -1,0 +1,245 @@
+<!DOCTYPE HTML>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <title>index</title>
+    <% include pageHead.html %>
+    <link rel="stylesheet" type="text/css" href="../css/style-index.css" />
+    <link rel="stylesheet" type="text/css" href="../css/style-swf.css" />
+</head>
+<body>
+<% include pageTop.html %>
+<div class="indexSwfWrap">
+    <div class="mid1200">
+
+    </div>
+</div>
+<div class="divMain">
+    <div class="indexSwf">
+        <!--轮播s-->
+        <div id="roll_Box" class="rollBox">
+            <!--播放内容-->
+            <div id="tab_Auto_Play" class="tabAutoPlay"></div>
+            <!--左右按钮-->
+            <ul id="tab_Auto_Btn" class="tabBtn">
+                <!--点点点-->
+                <!--用下面的json生成按钮-->
+            </ul>
+            <ul class="tab_content" id="tab_content">
+                <!--用下面的json生成广告-->
+            </ul>
+        </div>
+        <script src="../js/jquery-powerSwitch.min.js"></script>
+        <script>
+            var adData = [{
+                id: 1,
+                src: "../img/swf01.png",
+                title: "title1",
+                link: "#"
+            }, {
+                id: 2,
+                src: "../img/swf02.png",
+                title: "title2",
+                link: "#"
+            }, {
+                id: 3,
+                src: "../img/swf01.png",
+                title: "title1",
+                link: "#"
+            }];
+        </script>
+        <script>
+            //根据json生成广告
+            var htmlAd = "", htmlBtn = "";
+            $.each(adData, function (index, obj) {
+                if (index == 0) {
+                    htmlAd = htmlAd + "<li id='tabAutoPlay" + obj.id + "' class='tabAutoPlayChid'><a href='" + obj.link + "' target='_blank'><img title='" + obj.title + "'src='" + obj.src + "'></a></li>";
+                    htmlBtn = htmlBtn + "<li class='tabs'><a href='"+obj.link+"' class='tab_a tab_on' data-rel='tabAutoPlay" + obj.id + "'>" + obj.id + "</a></li>";
+                }
+                else {
+                    htmlAd = htmlAd + "<li id='tabAutoPlay" + obj.id + "' class='tabAutoPlayChid' style='display: none;'><a href='" + obj.link + "'target='_blank'><img title='" + obj.title + "'src='" + obj.src + "'></a></li>";
+                    htmlBtn = htmlBtn + "<li class='tabs'><a href='"+obj.link+"' class='tab_a' data-rel='tabAutoPlay" + obj.id + "'>" + obj.id + "</a></li>";
+                }
+            });
+            $("#tab_content").html(htmlAd);
+            $("#tab_Auto_Btn").html(htmlBtn);
+            // 绑定
+            $("#tab_Auto_Btn a").powerSwitch({
+                classAdd: "tab_on",
+                animation: "translate",
+                duration:500,
+                eventType: "mouseover",
+                autoTime: 3500,
+                hoverStop: true,
+                container: $("#tab_Auto_Play")
+            });
+            //设置点点点及按钮水平居中
+            $("#tab_Auto_Play a").css("margin-top",-$("#tab_Auto_Play a").height()/2);
+            $("#tab_Auto_Play").css("width",$(".divSwf").width()-17)
+            $("#tab_Auto_Btn").css("margin-left",-$("#tab_Auto_Btn").width()/2);
+            var pageWidth=$(window).width();
+            //控制按钮渐入渐出
+            $("#roll_Box").hover(
+                    function () {
+                        $("#tab_Auto_Play a").css("opacity", "0.6");
+                    },
+                    function () {
+                        $("#tab_Auto_Play a").css("opacity", "0");
+                    });
+            $("#tab_Auto_Play a").hover(
+                    function () {
+                        $(this).css("opacity", "1");
+                    },
+                    function () {
+                        $(this).css("opacity", "0.6");
+                    });
+        </script>
+        <!--轮播e-->
+    </div>
+    <div class="memBox loginBox">
+        <img src="../img/iconLogoG.png" class="logoG">
+        <p>手机登录</p>
+        <div class="icon iconSj"></div><input type="text" value="请输入手机号码" class="uPhone inputTxt uPhoneNum"><div class="clear"></div>
+        <input type="button" value="获取验证码" class="uYzm"><div class="clear"></div>
+        <div class="icon iconPwd"></div><input type="text" value="请输入验证码" class="uPwd inputTxt userYzm"><div class="clear"></div>
+        <input type="button" value="登 &nbsp;录" class="uBtn">
+        <p style="text-align: left;margin:0 0 0 10px;">其他登录方式</p>
+        <a href="javascript:;" class="lWx" id="indexWx"><div class="icon iconWx"></div> 微信</a>
+        <a href="javascript:;" class="lId" id="indexID"><div class="icon iconId"></div> 帐号</a>
+        <div class="clear"></div>
+    </div><div class="clear"></div>
+    <div class="listPptj titleA">
+        <h3><div class="bg"></div> 品牌推荐<span>精选品牌，品质保证</span></h3>
+        <a class="more" href="#" target="_blank" title="查看更多">查看更多</a><div class="clear"></div>
+        <ul>
+            <%for(var i=1;i<4;i++){%>
+            <li><a href="#" title="品牌推荐" target="_blank"><%-img (386,285)%></a> </li>
+            <%}%><div class="clear"></div>
+        </ul>
+    </div>
+    <div class="listRcck titleB">
+        <h3><div class="bg"></div> 产后康复<span>如初产康，产后修复专家~</span></h3>
+        <a class="more" href="#" target="_blank" title="查看更多">查看更多</a><div class="clear"></div>
+        <div class="lineA"></div>
+        <ul class="listBox">
+            <%for(var i=1;i<7;i++){%>
+            <li>
+                <a href="#" title="品牌推荐" target="_blank"><%-img (386,285)%></a>
+                <p class="price">
+                    <span>￥</span>288<span>.00</span>
+                </p>
+                <p class="name"><a href="#" target="_blank" title="产后肩颈护理">产后肩颈护理</a><br><span>原价￥666.00元</span> </p>
+                <a class="buyBtn" target="_blank" href="#" title="预约试听">
+                    预约体验
+                </a><div class="clear"></div>
+            </li>
+            <%}%><div class="clear"></div>
+        </ul>
+    </div>
+    <ul class="myfuwu">
+        <li>
+            <p>严格筛选优质月嫂，专业护理产妇与新生儿</p>
+            <span>&nbsp;&nbsp;找月嫂&nbsp;》</span>
+            <a class="tel" href="#" title="内容" target="_blank">&nbsp;&nbsp;查看更多&nbsp;》</a>
+            <a class="more" href="#" title="内容" target="_blank">&nbsp;&nbsp;立即预约&nbsp;》</a>
+        </li>
+        <li>
+            <p>小儿生活照料、护理以及科学教育、保育</p>
+            <span>&nbsp;&nbsp;育儿师&nbsp;》</span>
+            <a class="tel" href="#" title="内容" target="_blank">&nbsp;&nbsp;查看更多&nbsp;》</a>
+            <a class="more" href="#" title="内容" target="_blank">&nbsp;&nbsp;立即预约&nbsp;》</a>
+        </li>
+        <li>
+            <p>为产妇解决哺乳期乳房问题</p>
+            <span>&nbsp;&nbsp;催乳师&nbsp;》</span>
+            <a class="tel" href="#" title="内容" target="_blank">&nbsp;&nbsp;查看更多&nbsp;》</a>
+            <a class="more" href="#" title="内容" target="_blank">&nbsp;&nbsp;立即预约&nbsp;》</a>
+        </li>
+        <li>
+            <p>平衡阴阳  调和脏腑  行气活血  扶正祛邪</p>
+            <span>&nbsp;&nbsp;小儿推拿&nbsp;》</span>
+            <a class="tel" href="#" title="内容" target="_blank">&nbsp;&nbsp;查看更多&nbsp;》</a>
+            <a class="more" href="#" title="内容" target="_blank">&nbsp;&nbsp;立即预约&nbsp;》</a>
+        </li>
+        <div class="clear"></div>
+        <script>
+            $(".myfuwu li").hover(
+                    function() {
+                        $(this).children("span").hide();
+                        $(this).children("a").show();
+                    },
+                    function(){
+                        $(this).children("span").show();
+                        $(this).children("a").hide();
+                    });
+        </script>
+    </ul>
+    <div class="listZjkt titleB">
+        <h3><div class="bg"></div>专家课堂<span></span></h3>
+        <a class="more" href="#" target="_blank" title="查看更多">查看更多</a>
+        <ul class="titleNav">
+            <%for(var i=1;i<8;i++){%>
+            <li>
+                <a href="#">服务名称<%-i%></a>
+            </li>
+            <%}%>
+        </ul>
+        <div class="clear"></div>
+        <div class="lineA"></div>
+        <ul class="listBox">
+            <%for(var i=1;i<7;i++){%>
+            <li>
+                <a href="#" title="品牌推荐" target="_blank"><%-img (386,285)%></a>
+                <p class="price">
+                    <span>￥</span>288<span>.00</span>
+                </p>
+                <p class="name"><a href="#" target="_blank" title="产后肩颈护理">产后肩颈护理</a><br><span>原价￥666.00元</span> </p>
+                <a class="buyBtn" target="_blank" href="#" title="预约试听">
+                   预约试听
+                </a><div class="clear"></div>
+            </li>
+            <%}%><div class="clear"></div>
+        </ul>
+    </div>
+    <div class="listMysh titleB">
+        <h3><div class="bg"></div>母婴生活<span></span></h3>
+        <a class="more" href="#" target="_blank" title="查看更多">查看更多</a>
+        <ul class="titleNav">
+            <%for(var i=1;i<6;i++){%>
+            <li>
+                <a href="#">服务名称<%-i%></a>
+            </li>
+            <%}%>
+        </ul>
+        <div class="clear"></div>
+        <div class="lineA"></div>
+        <ul class="listBox">
+            <%for(var i=1;i<4;i++){%>
+            <li>
+                <a href="#" title="品牌推荐" target="_blank"><%-img (386,285)%></a>
+                <p class="price">
+                    <span>￥</span>288<span>.00</span>
+                </p>
+                <p class="name"><a href="#" target="_blank" title="产后肩颈护理">产后肩颈护理</a><br><span>原价￥666.00元</span> </p>
+                <a class="buyBtn" target="_blank" href="#" title="预约试听">
+                    立即购买
+                </a><div class="clear"></div>
+            </li>
+            <%}%><div class="clear"></div>
+        </ul>
+    </div>
+</div>
+<% include pageBottom.html %>
+<div class="leftBarWrap">
+    <ul class="leftBar">
+        <li><a href="javascript:goshow('.listPptj');">品牌推荐</a></li>
+        <li><a href="javascript:goshow('.listRcck');">产后康复</a></li>
+        <li><a href="javascript:goshow('.myfuwu');">母婴护理</a></li>
+        <li><a href="javascript:goshow('.listZjkt');">专家课堂</a></li>
+        <li><a href="javascript:goshow('.listMysh');">母婴生活</a></li>
+        <li><a href="#">在线客服</a></li>
+        <li><a href="javascript:goshow('.topBar');">返回顶部</a></li>
+    </ul>
+</div>
+</body>
+</html>

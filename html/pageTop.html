@@ -1,0 +1,153 @@
+<% var siteName="珍品母婴" %>
+<div class="topBar">
+    <div class="mid1200">
+        <div class="iconLocal"></div>
+        <h4>昆明
+        <span>热门城市:
+            <a href="#" target="_blank" title="红河">红河</a>
+            <a href="#" target="_blank" title="曲靖">曲靖</a>
+            <a href="#" target="_blank" title="文山">文山</a>
+            <a href="#" target="_blank" title="景洪">景洪</a>
+            <a href="#" target="_blank" title="昭通">昭通</a>
+        </span>
+        </h4>
+    </div>
+</div>
+<div class="siteTop">
+    <div class=" mid1200">
+        <a href="#" class="siteLogo" target="_blank" title="<%-siteName%>">
+            <%-siteName%>
+        </a>
+        <div class="chgArea">
+            昆&nbsp;&nbsp;明<br>
+            <a title="切换城市" target="_blank">
+                切换城市
+            </a>
+        </div>
+        <div class="searchBox">
+            <div class="searchBg"></div>
+            <input type="text" class="searchTxt" value="请输入搜索关键词">
+            <input type="button" class="searchBtn" value="搜&nbsp;&nbsp;索">
+            <p><b>热门搜索</b>
+                <span><a href="#" target="_blank" title="月嫂">月嫂</a> </span>
+                <span><a href="#" target="_blank" title="催乳师">催乳师</a> </span>
+                <span><a href="#" target="_blank" title="产后康复师">产后康复师</a> </span>
+                <span><a href="#" target="_blank" title="小儿推拿">小儿推拿</a> </span>
+                <span><a href="#" target="_blank" title="发满月汗">发满月汗</a> </span>
+            </p>
+        </div>
+        <div class="hotPhone"><div class="bg"></div> 0871-1234567</div><div class="clear"></div>
+    </div></div>
+<div class="siteNav">
+    <div class="mid1200">
+        <div class="serMenu">
+            <div class="bg"></div><a href="#" target="_blank" title="全部分类" class="bt">全部分类</a>
+            <ul class="subMenu" id="subMenu">
+                <li>
+                    <div class="bg"></div>
+                    <p>
+                        产后康复<br>
+                        <span><a href="#" target="_blank" title="盆底肌修复">盆底肌修复</a></span>
+                        <span><a href="#" target="_blank" title="体质调理">体质调理</a></span>
+                        <span><a href="#" target="_blank" title="发满月汗">发满月汗</a></span>
+                    </p>
+                    <div class="chid">
+                        <% for(var i=1;i<6;i++){%>
+                        <a href="#" target="_blank" title="项目名称">产后康复<%-i%></a>
+                        <%}%>
+                    </div>
+                </li>
+                <li>
+                    <div class="bg"></div>
+                    <p>
+                        母婴护理<br>
+                        <span><a href="#" target="_blank" title="月嫂">月嫂</a></span>
+                        <span><a href="#" target="_blank" title="育儿师">育儿师</a></span>
+                        <span><a href="#" target="_blank" title="催乳师">催乳师</a></span>
+                        <span><a href="#" target="_blank" title="小儿推拿">小儿推拿</a></span>
+                    </p>
+                    <div class="chid">
+                        <% for(var i=1;i<6;i++){%>
+                        <a href="#" target="_blank" title="项目名称">母婴护理<%-i%></a>
+                        <%}%>
+                    </div>
+                </li>
+                <li>
+                    <div class="bg"></div>
+                    <p>
+                        专家课堂<br>
+                        <span><a href="#" target="_blank" title="母婴护理师培训">母婴护理师培训</a></span>
+                        <span><a href="#" target="_blank" title="月嫂培训">月嫂培训</a></span>
+                    </p>
+                    <div class="chid">
+                        <% for(var i=1;i<6;i++){%>
+                        <a href="#" target="_blank" title="项目名称">专家课堂<%-i%></a>
+                        <%}%>
+                    </div>
+                </li>
+                <li>
+                    <div class="bg"></div>
+                    <p>
+                        母婴生活<br>
+                        <span><a href="#" target="_blank" title="月子中心">月子中心</a></span>
+                        <span><a href="#" target="_blank" title="婴儿游泳馆">婴儿游泳馆</a></span>
+                        <span><a href="#" target="_blank" title="小儿推拿">小儿推拿</a></span>
+                    </p>
+                    <div class="chid">
+                        <% for(var i=1;i<6;i++){%>
+                        <a href="#" target="_blank" title="项目名称">母婴生活<%-i%></a>
+                        <%}%>
+                    </div>
+                </li>
+                <li>
+                    <div class="bg"></div>
+                    <p>
+                        精品推荐<br>
+                        <span><a href="#" target="_blank" title="奶嘴奶瓶">奶嘴奶瓶</a></span>
+                        <span><a href="#" target="_blank" title="婴儿尿裤">婴儿尿裤</a></span>
+                        <span><a href="#" target="_blank" title="益智玩具">益智玩具</a></span>
+                    </p>
+                    <div class="chid">
+                        <% for(var i=1;i<6;i++){%>
+                        <a href="#" target="_blank" title="项目名称">精品推荐<%-i%></a>
+                        <%}%>
+                    </div>
+                </li>
+            </ul>
+        </div>
+        <script>
+
+            $("#serMenu").hover(
+                    function () {
+                        $(".subMenu").show();
+                    },
+                    function () {
+                        $(".subMenu").hide();
+                    });
+
+            $("#subMenu li").hover(
+                    function () {
+                        //$(this).addClass("actMenu");
+                        $(this).find(".chid").show();
+                    },
+                    function () {
+                        //$(this).removeClass("actMenu");
+                        $(this).find(".chid").hide();
+                    });
+
+        </script>
+        <ul class="mainMenu">
+            <li><a href="#" target="_blank" title="产后康复">产后康复</a></li>
+            <li><a href="#" target="_blank" title="母婴护理">母婴护理</a></li>
+            <li><a href="#" target="_blank" title=专家课堂"">专家课堂</a></li>
+            <li><a href="#" target="_blank" title="母婴生活">母婴生活</a></li>
+            <li><a href="#" target="_blank" title="精品推荐">精品推荐</a></li>
+            <div class="clear"></div>
+        </ul>
+    </div>
+</div>
+<div class="navWhere">
+    <div class="mid1200">
+        <div class="iconWhere"></div><p>当前位置: 首页>月嫂列表</p><div class="clear"></div>
+    </div>
+</div>

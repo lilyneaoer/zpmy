@@ -1,0 +1,133 @@
+<!DOCTYPE HTML>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <title>商品详情</title>
+    <% include pageHead.html %>
+    <link rel="stylesheet" type="text/css" href="../css/style-calendar.css">
+    <link rel="stylesheet" type="text/css" href="../css/style-animate.css">
+    <link rel="stylesheet" type="text/css" href="../css/style-simple.slide.css">
+    <script type="text/javascript" src="../js/calenda/simple-calendar.js"></script>
+    <script type="text/javascript" src="../js/simple.slide.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="../css/style-list.css" />
+</head>
+<body>
+<% include pageTop.html %>
+<div class="mid1200">
+    <ul class="ysList2">
+        <li>
+            <%- img(400,400) %>
+            <div class="ysInfo">
+                <p>
+                    <a href="#" title="高级母婴护理师培训">高级母婴护理师培训</a>
+                </p>
+                <p>
+                    星月嫂推出免费试学活动，试学一天，不收任何费用
+                </p>
+                <p>
+                    <span>随到随学</span>
+                    <span>提供住宿</span>
+                    <span>学会为止</span>
+                    <span>提供就业</span>
+                    <div class="clear"></div>
+                </p>
+                <p>
+                    <i class="goodsIntro">包含培训费+报名费+教材费+复习资料费；</i><br>
+                    <i class="goodsAddres">培训地点：昆明市北京路402号建设大厦</i>
+                    <div class="clear"></div>
+                </p>
+                <p>
+                    ￥<b>6666</b>元月<span>原价￥<b>6666</b>元月</span><br>
+                    &nbsp;<b>6</b>&nbsp;人预约&nbsp;&nbsp;&nbsp;&nbsp;<b>6</b>&nbsp;条评价&nbsp;&nbsp;&nbsp;&nbsp;<b>6</b>&nbsp;人浏览
+                </p>
+            </div><div class="clear"></div>
+            <div class="btnsWrap">
+                <a href="#" title="已回电" class="btns">立即购买</a>
+                <a href="#" title="已回电" class="btns">加入收藏</a>
+            </div>
+
+        </li>
+        <div class="clear"></div>
+    </ul>
+    <div class="leftConent">
+        <ul class="pageMenu">
+            <li class="selOn menu"> <a href="javascript:goshow('.goodsXq');">商品详情</a></li>
+            <li class="menu"> <a href="javascript:goshow('.goodsDd');">订单记录</a></li>
+            <li class="menu"> <a href="javascript:goshow('.ysYhpl');">用户评论</a></li>
+            <li class="menu"> <a href="javascript:goshow('.goodsSj');">商家介绍</a></li>
+            <li> <a href="javascript:;">立即预约</a></li>
+            <div class="clear"></div>
+        </ul>
+        <div class="goodsXq  ysLBox">
+            <div class="ysTitle"><div class="icons"></div><h3>商品详情</h3><div class="clear"></div></div>
+            <div class="arcContent">
+                <p>感谢月嫂杨姐对我和宝宝一个月来的细心照顾，杨姐很专业，经验丰富，好多宝宝的问题都遇到过，杨姐帮宝宝调整了好的作息习惯，在没有月嫂的日子里我一个人带也省力很多，对于新妈妈在月子期间的饮食更是搭配的合理又美味，做得一手好菜，真不舍得杨姐走啊，开奶水平也很棒，在一开始宝宝住院半个月没能吸到母乳的情况下实现了全母乳喂养，宝宝体重也从出生的7斤3两满月时已达9斤半，衷心的说声杨姐很棒值得推荐。</p>
+            </div>
+        </div>
+        <div class="goodsDd  ysLBox">
+            <div class="ysTitle"><div class="icons"></div><h3>订单记录</h3><div class="clear"></div></div>
+        </div>
+        <div class="goodsPl ysYhpl  ysLBox">
+             <div class="ysTitle"><div class="icons"></div><h3>用户评论</h3><div class="clear"></div></div>
+            <ul class="guestList">
+                <%for(i=0;i<4;i++){%>
+                <li>
+                    <h4>张女士<span>发表日期 : 2017-06-01</span></h4><div class="clear"></div>
+                    <p>     感谢月嫂杨姐对我和宝宝一个月来的细心照顾，杨姐很专业，经验丰富，好多宝宝的问题都遇到过，杨姐帮宝宝调整了好的作息习惯，在没有月嫂的日子里我一个人带也省力很多，对于新妈妈在月子期间的饮食更是搭配的合理又美味，做得一手好菜，真不舍得杨姐走啊，开奶水平也很棒，在一开始宝宝住院半个月没能吸到母乳的情况下实现了全母乳喂养，宝宝体重也从出生的7斤3两满月时已达9斤半，衷心的说声杨姐很棒值得推荐。</p>
+                </li>
+                <%}%>
+            </ul>
+        </div>
+        <div class="goodsSj  ysLBox">
+            <div class="ysTitle"><div class="icons"></div><h3>商家介绍</h3><div class="clear"></div></div>
+            <div class="arcContent">
+                <p>感谢月嫂杨姐对我和宝宝一个月来的细心照顾，杨姐很专业，经验丰富，好多宝宝的问题都遇到过，杨姐帮宝宝调整了好的作息习惯，在没有月嫂的日子里我一个人带也省力很多，对于新妈妈在月子期间的饮食更是搭配的合理又美味，做得一手好菜，真不舍得杨姐走啊，开奶水平也很棒，在一开始宝宝住院半个月没能吸到母乳的情况下实现了全母乳喂养，宝宝体重也从出生的7斤3两满月时已达9斤半，衷心的说声杨姐很棒值得推荐。</p>
+            </div>
+        </div>
+    </div>
+    <div class="rightBarYs">
+        <div class="ysLBox rFwsj">
+            <div class="ysTitle"><div class="icons"></div><h3>服务商家</h3><div class="clear"></div></div>
+            <img src="../img/logo2.png" alt="服务流程">
+            <p>
+                <span>服务商家:</span>星月嫂之家<br>
+                <span>服务热线:</span>400-6666-760
+            </p>
+
+        </div>
+        <div class="ysLBox rFwlc">
+            <div class="ysTitle"><div class="icons"></div><h3>服务流程</h3><div class="clear"></div></div>
+            <img src="../img/liucheng.png" alt="服务流程">
+        </div>
+        <div class="ysLBox rYebd">
+            <div class="ysTitle"><div class="icons"></div><h3>育婴知识</h3><a href="#" title="查看更多">查看更多</a><div class="clear"></div></div>
+            <ul>
+                <%for(i=1;i<11;i++){%>
+                <li><a href="#" title="小儿感冒症状与防治">小儿感冒症状与防治</a></li>
+                <%}%>
+            </ul>
+        </div>
+        <div class="ysLBox rYxys">
+            <div class="ysTitle"><div class="icons"></div><h3>严选月嫂</h3><a href="#" title="查看更多">查看更多</a><div class="clear"></div></div>
+            <ul>
+                <%for(i=1;i<8;i++){%>
+                <li>
+                    <a href="#" title="张阿姨" target="_blank">
+                        <img src="http://temp.im/266x266" alt="张阿姨" title="张阿姨">
+                    </a>
+                    <p>
+                        <span>张阿姨</span>
+                        <span>35岁</span>
+                        <span>￥6666/月</span>
+                    </p>
+                </li>
+                <%}%>
+            </ul>
+        </div>
+    </div><div class="clear"></div>
+</div>
+<% include pageBottom.html %>
+<!--顶部导航弹出菜单-->
+<script src="../js/siteMenu.js"></script>
+</body>
+</html>
