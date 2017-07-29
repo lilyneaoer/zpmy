@@ -936,3 +936,66 @@
 .rYyzs{
   margin:10px 0 0 0;
 }
+//文章详情
+.arcWrap{
+  width:900px;
+  overflow: hidden;
+  margin:10px 0 0 0;
+  background: #FFF;
+  border:1px solid #EDEDED;
+  .arc{
+    position: relative;
+    padding:15px;
+    .arcTitle{
+      margin:20px;
+      text-align: center;
+      font-size: 28px;
+      color: #232323;
+    }
+    .arcTime{
+      margin:0 0 15px 0;
+      font-size: 14px;
+      text-align: center;
+      color: #989696;
+    }
+    p{
+      font-size: 14px;
+      text-indent: 2em;
+      color:#464646;
+      line-height: 1.5;
+      margin:0 0 10px 0;
+    }
+    .arcType{
+      height: 26px;
+      line-height: 26px;
+      top:5px;
+      right:5px;
+      position: absolute;
+      color: #FFF;
+      padding: 0 7px 0 23px;
+      background: url(../slice/bianqBg.png) 0 center no-repeat @zpRed;
+    }
+    .arcType:hover{
+      color: #FBF4A3;
+    }
+  }
+  .arcNav{
+    margin:10px;
+    font-size: 16px;
+    color: #858484;
+    li{
+      a{
+        color: #999;
+      }
+      a:hover{
+        color: @zpRed;
+      }
+    }
+    li:nth-child(1){
+      float:left;
+    }
+    li:nth-child(2){
+      float:right;
+    }
+  }
+}
