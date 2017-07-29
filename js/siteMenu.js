@@ -44,6 +44,5 @@ $(window).scroll(function(){
         $(".pageMenu").css("position","static");
         $(".pageMenu li").removeClass("selOn");
         $(".pageMenu li:nth-child(1)").addClass("selOn");
-        //$(".pageMenu").fadeOut(1500);
     }
 });

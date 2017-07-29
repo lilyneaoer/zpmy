@@ -1,0 +1,66 @@
+<!DOCTYPE HTML>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <title>文章列表</title>
+    <% include pageHead.html %>
+    <link rel="stylesheet" type="text/css" href="../css/style-list.css" />
+</head>
+<body>
+<% include pageTop.html %>
+<div class="mid1200">
+    <div class="leftContent">
+        <div class="arcBox">
+            <h3><div class="bg"></div>母婴知识</h3><div class="clear"></div>
+            <div class="lineB"></div>
+            <ul class="arcList">
+                <%for(var i=1;i<12;i++){%>
+                <li>
+                    <p class="arcImg">
+                        <%- img(200,150) %>
+                    </p>
+                    <p class="arcTitle">
+                        <a href="#" title="孕期吃水果 别犯这些错" target="_blank">孕期吃水果 别犯这些错</a><span>2017-07-01</span>
+                    </p>
+                    <p class="arcIntro">
+                        <a href="#" target="_blank">我们通常都会认为饭后吃水果最佳，台湾一教授却提出新见解，强调饭前一小时吃水果最为有益。其理由是：水果属生食，吃生食后再进熟食，体内就不会产生白细胞增高等反应，有利于保护人体免疫系统，从而增强防病抗癌能力。饭后吃水果则无此种保护作用。此外，饱食之后吃水果，所含果糖不能及时进入肠道，以致在胃中发酵，产生有机酸，引起腹胀腹泻，而苹果中的鞣酸和蛋白质结合生成不不易消化的鞣酸蛋白质，更会使肠胃发胀。所以，饭后两个小时后再吃苹果比较好。
+                        </a>
+                    </p><div class="clear"></div>
+                </li>
+                <%}%>
+            </ul>
+            <% include pageBar.html %>
+        </div>
+    </div>
+    <div class="rightBarYs">
+        <div class="ysLBox rYebd rYyzs">
+            <div class="ysTitle"><div class="icons"></div><h3>热门点击</h3><a href="#" title="查看更多">查看更多</a><div class="clear"></div></div>
+            <ul>
+                <%for(i=1;i<11;i++){%>
+                <li><a href="#" title="小儿感冒症状与防治">小儿感冒症状与防治</a></li>
+                <%}%>
+            </ul>
+        </div>
+        <div class="ysLBox rYxys rYyzs">
+            <div class="ysTitle"><div class="icons"></div><h3>严选月嫂</h3><a href="#" title="查看更多">查看更多</a><div class="clear"></div></div>
+            <ul>
+                <%for(i=1;i<8;i++){%>
+                <li>
+                    <a href="#" title="张阿姨" target="_blank">
+                        <img src="http://temp.im/266x266" alt="张阿姨" title="张阿姨">
+                    </a>
+                    <p>
+                        <span>张阿姨</span>
+                        <span>35岁</span>
+                        <span>￥6666/月</span>
+                    </p>
+                </li>
+                <%}%>
+            </ul>
+        </div>
+    </div>
+    <div class="clear"></div>
+</div>
+<% include pageBottom.html %>
+</body>
+</html>
