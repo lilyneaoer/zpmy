@@ -418,7 +418,7 @@
     }
     .btnsWrap{
       left:600px;
-      bottom:25px;
+      bottom:15px;
       position: absolute;
       .btns{
         width:150px;
@@ -996,6 +996,165 @@
     }
     li:nth-child(2){
       float:right;
+    }
+  }
+}
+//用户后台
+.uLeft{
+  width:290px;
+  float:left;
+  margin:10px 0 0 0;
+  background: #FFF;
+  border:1px solid #EDEDED;
+  h3{
+    font-size: 18px;
+    color: @zpRed;
+    text-align: center;
+    margin:10px 0;
+    //margin:10px 0 0 50px;
+    position: relative;
+    .bg{
+      width:20px;
+      height:20px;
+      top:2px;
+      left:75px;
+      position: absolute;
+      background-image: url("../slice/iconID.png");
+    }
+  }
+  .lineB{
+    background: #EDEDED;
+  }
+  ul{
+    margin:15px;
+    li{
+      font-size: 16px;
+      margin: 10px 0 0 0;
+      padding:0 0 10px 0;
+      text-align: center;
+      border-bottom:1px dashed #EDEDED;
+    }
+  }
+}
+.uRight{
+  width:900px;
+  float:right;
+  margin:10px 0 0 0;
+  background: #FFF;
+  border:1px solid #EDEDED;
+  h3{
+    font-size: 18px;
+    margin:10px;
+  }
+  .uList{
+    margin:0 10px;
+    li{
+      margin: 0 0 10px 0;
+      position: relative;
+      padding:0 0 15px 0;
+      border-bottom: 1px dashed #EDEDED;
+      .gImg{
+        float: left;
+      }
+      .gTitle{
+        font-size: 18px;
+        float: left;
+        width:565px;
+        margin:10px 0 0 10px;
+        a{
+          float: left;
+        }
+        span{
+          font-size: 12px;
+          float: right;
+          color: #666;
+          margin:5px 0 0 0;
+        }
+      }
+      .gIntro{
+        width:565px;
+        float:left;
+        margin: 5px 0 0 10px;
+        line-height: 1.5;
+        text-indent: 2em;
+        color: #999;
+      }
+      .gPrice{
+        width:565px;
+        float: left;
+        background: #E9E9E9;
+        line-height: 2;
+        margin:15px 0 0 10px;
+        padding:5px;
+        b{
+          font-size: 16px;
+          color: @zpRed;
+        }
+        b:nth-child(1){
+          font-size:18px;
+        }
+        span {
+          margin: 0 0 0 10px;
+          font-size: 14px;
+          color: #999;
+          text-decoration: line-through;
+          b:nth-child(1) {
+            font-size: 16px;
+            color: #999;
+          }
+        }
+      }
+      .btnsWrap{
+        right:10px;
+        top:50%;
+        margin-top: -60px;
+        position: absolute;
+        .btns{
+          width:120px;
+          height:35px;
+          font-size: 14px;
+          display: block;
+          margin:15px 0 0 0;
+          color: #FFF;
+          text-align: center;
+          line-height: 35px;
+          border:1px solid @zpRed;
+          background:@zpRed;
+          border-radius: 3px;
+        }
+        .btns:hover{
+          background: #EE4D75;
+        }
+      }
+    }
+  }
+  .guestList{
+    margin:0 10px;
+    li{
+      font-size: 14px;
+      background: #F1F1F1;
+      margin:0 0 10px 0;
+      h4{
+        padding:5px;
+        color: #FFF;
+        //float:left;
+        background:@zpRed;
+        span{
+          float:right;
+        }
+      }
+      p:nth-child(3){
+        line-height: 1.5;
+        padding:10px;
+        font-size: 14px;
+        color:#666;
+        text-indent: 2em;
+        span{
+          font-size: 26px;
+          color: #6F6A6A;
+          font-weight: bold;
+        }
+      }
     }
   }
 }

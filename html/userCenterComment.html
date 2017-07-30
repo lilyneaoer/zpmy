@@ -1,0 +1,38 @@
+<!DOCTYPE HTML>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <title>用户中心-我的评价</title>
+    <% include pageHead.html %>
+    <link rel="stylesheet" type="text/css" href="../css/style-list.css" />
+</head>
+<body>
+<% include pageTop.html %>
+<div class="mid1200">
+    <div class="uLeft">
+        <h3><div class="bg"></div>用户中心</h3>
+        <div class="lineB"></div>
+        <ul>
+            <li><a href="javascript:;">我的收藏</a></li>
+            <li><a href="javascript:;">我的预约</a></li>
+            <li><a href="javascript:;">我的订单</a></li>
+            <li><a href="javascript:;">我的评价</a></li>
+        </ul>
+    </div>
+    <div class="uRight">
+        <h3>我的评价</h3>
+        <ul class="guestList">
+            <%for(i=0;i<4;i++){%>
+            <li>
+                <h4>张女士<span>发表日期 : 2017-06-01</span></h4><div class="clear"></div>
+                <p>     感谢月嫂杨姐对我和宝宝一个月来的细心照顾，杨姐很专业，经验丰富，好多宝宝的问题都遇到过，杨姐帮宝宝调整了好的作息习惯，在没有月嫂的日子里我一个人带也省力很多，对于新妈妈在月子期间的饮食更是搭配的合理又美味，做得一手好菜，真不舍得杨姐走啊，开奶水平也很棒，在一开始宝宝住院半个月没能吸到母乳的情况下实现了全母乳喂养，宝宝体重也从出生的7斤3两满月时已达9斤半，衷心的说声杨姐很棒值得推荐。</p>
+            </li>
+            <%}%>
+        </ul>
+    </div><div class="clear"></div>
+</div>
+<% include pageBottom.html %>
+<!--顶部导航弹出菜单-->
+<script src="../js/siteMenu.js"></script>
+</body>
+</html>

@@ -1,0 +1,49 @@
+<!DOCTYPE HTML>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <title>用户中心-我的订单</title>
+    <% include pageHead.html %>
+    <link rel="stylesheet" type="text/css" href="../css/style-list.css" />
+</head>
+<body>
+<% include pageTop.html %>
+<div class="mid1200">
+    <div class="uLeft">
+        <h3><div class="bg"></div>用户中心</h3>
+        <div class="lineB"></div>
+        <ul>
+            <li><a href="javascript:;">我的收藏</a></li>
+            <li><a href="javascript:;">我的预约</a></li>
+            <li><a href="javascript:;">我的订单</a></li>
+            <li><a href="javascript:;">我的评价</a></li>
+        </ul>
+    </div>
+    <div class="uRight">
+        <h3>我的订单</h3>
+        <ul class="uList">
+            <% for(i=0;i<5;i++){ %>
+            <li>
+                <p class="gImg">
+                    <%- img(150,150) %>
+                </p>
+                <p class="gTitle">
+                    <a href="#" target="_blank" title="服务名称">高级母婴护理师培训</a><span>2017-07-01 14:00:00</span>
+                </p>
+                <p class="gIntro">感谢月嫂杨姐对我和宝宝一个月来的细心照顾，杨姐很专业，经验丰富，好多宝宝的问题都遇到过。杨姐很专业，经验丰富，好多宝宝的问题都遇到过</p>
+                <p class="gPrice">
+                    ￥<b>6666</b>元月<span>原价￥<b>6666</b>元月</span></p><div class="clear"></div>
+                <div class="btnsWrap">
+                    <a href="#" title="已回电" class="btns">查看详情</a>
+                    <a href="#" title="已回电" class="btns">发表评价</a>
+                </div>
+            </li>
+            <%}%>
+        </ul>
+    </div><div class="clear"></div>
+</div>
+<% include pageBottom.html %>
+<!--顶部导航弹出菜单-->
+<script src="../js/siteMenu.js"></script>
+</body>
+</html>
